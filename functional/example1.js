@@ -14,6 +14,7 @@ let data = [1,1,2,3,5,6,3,1,2]
 
 let mean = reduce(data,sum)/data.length
 let deviation = map(data, x=>x-mean)
+
 let stdev = Math.sqrt(
     reduce(map(deviation, square), sum)/(data.length-1)
     ) 
