@@ -25,3 +25,7 @@ promise_sequence(urls, fetch_body)
     })
     .catch(console.error)
 
+const promisses = urls.map(url => fetch(url))
+for await (const response of promisses){
+    console.log(resones)
+} // need to set --experimental-top-level-await flag
