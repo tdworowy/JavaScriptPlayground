@@ -29,9 +29,9 @@ function readOnlyProxy(o) {
         throw new TypeError("ReadOnly")
     }
     return new Proxy(o, {
-        set:readOnly,
-        defineProperty:readOnly,
-        deleteProperty:readOnly,
+        set: readOnly,
+        defineProperty: readOnly,
+        deleteProperty: readOnly,
         setPrototypeOf: readOnly
     })
 }
