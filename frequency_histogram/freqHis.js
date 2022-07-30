@@ -3,6 +3,7 @@ class DefaultMap extends Map {
     super();
     this.defaultValue = defaultValue;
   }
+
   get(key) {
     if (this.has(key)) {
       return super.get(key);
@@ -11,19 +12,22 @@ class DefaultMap extends Map {
     }
   }
 }
+
 class Histogram {
   constructor() {
     this.letterCounts = new DefaultMap(0);
     this.totalLeatters = 0;
   }
+
   add(text) {
     text = text.replace(/\s/g, "").toUpperCase();
     for (let character of text) {
-      let count = this.letterCounts.get(character); // TypeError: this.letterCounts.get is not a function
+      let count = this.letterCounts.get(character);
       this.letterCounts.set(character, count + 1);
-      this.letterCounts++;
+      this.totalLeatters++;
     }
   }
+
   toString() {
     let entries = [...this.letterCounts];
     entries.sort((a, b) => {
@@ -57,7 +61,7 @@ class Histogram {
 //     }
 // )
 
-let histogram = new Histogram();
+const histogram = new Histogram();
 histogram.add("Test");
 histogram.add("Test");
 histogram.add("aaaaa");
