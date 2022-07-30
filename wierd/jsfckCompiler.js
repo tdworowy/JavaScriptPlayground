@@ -52,7 +52,7 @@ const compile = (code) =>
   `(()=>{})[${fromString("constructor")}](${fromString(code)})()`;
 
 const args = process.argv;
-console.log(args);
+
 const imputFile = args[2];
 const oputputFile = imputFile.replace(/^([^.]*)\.(.*)$/, "$1.jsfck.$2");
 
