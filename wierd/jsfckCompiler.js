@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=sRWE5tnaxlI&list=PL4bRyXZPu_BBlcjQwaTGe8TXqaUzXVeYK&index=6&t=938s
+
 fs = require("fs");
 
 const zero = "+[]";
